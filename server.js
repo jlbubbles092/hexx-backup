@@ -23,4 +23,8 @@ client.on('ready', () => {
     client.user.setActivity(`with Commando! Use ${client.commandPrefix}help to see a list of commands.`);
 });
 
+client.setProvider(
+    sqlite.open( { filename: path.join(__dirname, "settings.sqlite3") } ).then( db => new CommandoClient.SQLiteProvider(db) )
+).catch(console.error);
+
 client.login(process.env.TOKEN);
