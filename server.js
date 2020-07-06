@@ -1,6 +1,5 @@
-const { CommandoClient, SQLiteProvider } = require('discord.js-commando');
+const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
-const sqlite = require('sqlite');
 
 const client = new CommandoClient({
   commandPrefix: 'h!',
