@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando');
 
-module.exports = class SayCommand extends Command {
+module.exports = class NukeCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'nuke',
@@ -19,6 +19,6 @@ module.exports = class SayCommand extends Command {
 
 	run(message, { user }) {
     message.reply(`Nuked ${user}!`)
-    message.channel.send(`${user}, you have been nuked by ${message.author}.,`)
+    message.channel.send(`${user}, you have been nuked by ${message.author}.`, { files: ["https://media.giphy.com/media/XrNry0aqYWEhi/giphy.gif"] });
   }
 };
