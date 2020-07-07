@@ -1,19 +1,23 @@
 const { Command } = require('discord.js-commando');
+const { RichEmbed } = require('discord.js');
 
-module.exports = class KickCommand extends Command {
-	constructor(client) {
-		super(client, {
-			name: 'servercount',
-			group: 'misc',
-			memberName: 'servercount',
-			description: 'Server count of the bot.'
-		});
-	}
+module.exports = class ServerCountCommand extends Command {
+    constructor(client) {
+        super(client, {
+            name: 'servercount',
+            group: 'misc',
+            memberName: 'servercount',
+            description: 'Shows the server count in embed form.',
+        });    
+    }
 
-	run(message, args) { 
-    const scount = this.client.guilds.size;
-    message.channel.send(`i am is in ${scount} servers!`)
-  }
+    run(msg, args) {
+        const scount = this.client.guilds.size;
+        const embed = new RichEmbed()
+            .setDescription(`I am in ${scount} servers!`)
+            .setAuthor(msg.author.username, msg.author.displayAvatarURL)
+            .setColor(0x00AE86)
+            .setTimestamp();
+        return msg.embed(embed);
+    }
 };
-
-//hey here https://discord.gg/3fmpAXQ
