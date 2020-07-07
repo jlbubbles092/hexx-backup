@@ -8,6 +8,7 @@ module.exports = class WarnCommand extends Command {
 			group: 'admin',
 			memberName: 'warn',
 			description: 'Warns people.',
+      userPermissions: ['MANAGE_MESSAGES'],
 		});
 	}
 
@@ -28,7 +29,7 @@ let reason = args.slice(1).join(' ');
 
   message.delete();
   
-  message.channel.send(`${user.tag} has been warned by $`)
+  message.channel.send(`${user.tag} has been warned by ${message.author}.`)
 
   }
 }

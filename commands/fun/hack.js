@@ -10,7 +10,7 @@ module.exports = class HackCommand extends Command {
       args: [
           {
 			      key: 'user',
-			      prompt: 'Who would you like to murder?',
+			      prompt: 'Who would you like to hack?',
 			      type: 'string',
 		    },
       ]
@@ -18,7 +18,7 @@ module.exports = class HackCommand extends Command {
 	}
 
 	run(message, { user }) {
-    message.reply(`Killed ${user}!`)
-    message.channel.send(`${user}, your dead forever.`, { files: ["https://media.giphy.com/media/PnhOSPReBR4F5NT5so/giphy.gif"] });
+    message.channel.send(`Starting to hack ${user}.`)
+    setTimeout(5000)
   }
 };
