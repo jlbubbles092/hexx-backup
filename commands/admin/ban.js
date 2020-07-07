@@ -33,4 +33,5 @@ const user = message.mentions.users.first();
       message.reply("You didn't mention the user to ban!");
     }
   }
-}
+};
+// take tutorials. use setup guides, you'll get the hang of it. 
