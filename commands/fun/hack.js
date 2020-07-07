@@ -19,13 +19,9 @@ module.exports = class HackCommand extends Command {
 
 	run(message, { user }) {
     message.channel.send(`Starting to hack ${user}.`)
-    setTimeout(function(), { alert } 5000)
     message.edit(`Stealing credit card.`)
-    setTimeout(function, 5000)
     message.edit(`Buying dresses and peanuts.`)
-    setTimeout(function, 5000)
     message.edit(`Hacking wifi password.`)
-    setTimeout(function, 5000)
     message.edit(`Buying $1,000,000 stuff and done! You can now put more commands.`)
   }
 };
