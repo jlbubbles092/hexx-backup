@@ -11,7 +11,8 @@ const client = new CommandoClient({
 client.registry
     .registerDefaultTypes()
     .registerGroups([
-        ['admin', 'Admin-Only Commands']
+        ['admin', 'Admin-Only Commands'],
+        ['misc', 'Important or Not-Important Stuff.']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()

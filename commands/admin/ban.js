@@ -34,4 +34,4 @@ const user = message.mentions.users.first();
     }
   }
 };
-// take tutorials. use setup guides, you'll get the hang of it. 
+// no but we can do that.
