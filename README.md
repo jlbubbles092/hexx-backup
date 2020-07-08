@@ -22,5 +22,6 @@ Click `Show` in the header to see the app live. Updates to your code will instan
 ## Made by [hexx offical discord](https://discord.gg/3fmpAXQ)
 
 **hexx offical discord** is a friendly server that makes hexx bots.
-
+**we made 3 bots for now it is cool tho since i love the server**
+**join
 ( ᵔ ᴥ ᵔ )

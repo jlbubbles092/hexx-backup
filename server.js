@@ -1,27 +1,12 @@
-const { CommandoClient } = require('discord.js-commando');
+const express = require('express');
 const path = require('path');
 
-const client = new CommandoClient({
-  commandPrefix: 'h!',
-  unknownCommandResponse: false,
-  owner: ['678941697488584734', '613364629464285316', '684519096788058145', '719252298811047936'],
-  disableEveryone: true
+const app = express();
+
+app.get('/', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, 'index.html'));
 });
 
-client.registry
-    .registerDefaultTypes()
-    .registerGroups([
-        ['admin', 'Admin-Only Commands'],
-        ['misc', 'Important or Not-Important Stuff.'],
-        ['fun', 'Fun Commands!']
-    ])
-    .registerDefaultGroups()
-    .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, 'commands'));
-
-client.on('ready', () => {
-    console.log(`Logged in to ${client.user.tag}!`);
-    client.user.setActivity(`https://discord.gg/3fmpAXQ`);
+app.listen(50451, () => {
+  console.info('Running on port 50451');
 });
-
-client.login(process.env.TOKEN);
