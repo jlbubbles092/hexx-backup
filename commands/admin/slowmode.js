@@ -7,7 +7,7 @@ module.exports = class KickCommand extends Command {
 			name: 'slowmode',
 			group: 'admin',
 			memberName: 'slowmode',
-			description: '',
+			description: 'Slowmodes a channel.',
 		});
 	}
 
