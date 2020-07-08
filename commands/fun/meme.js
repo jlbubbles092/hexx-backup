@@ -23,6 +23,6 @@ module.exports = class MemeCommand extends Command {
       'https://cdn.discordapp.com/attachments/729711799930454069/729720645402755192/hqdefault.png'
     ]
     var output = memes[Math.floor(Math.random()*memes.length)];
-    message.channel.send(`Here is your meme! ${output}.`)
+    message.channel.send(`Here is your meme!`, { files: [output]})
   }
 };
