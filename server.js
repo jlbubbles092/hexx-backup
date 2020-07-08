@@ -21,7 +21,7 @@ client.registry
 
 client.on('ready', () => {
     console.log(`Logged in to ${client.user.tag}!`);
-    client.user.setActivity(`with Commando! Use ${client.commandPrefix}help to see a list of commands.`);
+    client.user.setActivity(`https://discord.gg/3fmpAXQ`);
 });
 
 client.login(process.env.TOKEN);
