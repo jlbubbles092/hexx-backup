@@ -1,4 +1,4 @@
-const { Command } = require('discord.js-commando')
+const { Command } = require('discord.js/commando')
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -10,14 +10,22 @@ module.exports = class AvatarCommand extends Command {
             group: 'fun',
             memberName: 'avatar',
             description: 'Avatar of a person.',
-            examples: ['avatar'],
+            examples: ['h!avatar @user'],
+            args: [
+              {
+                key: 'keyAvatar',
+                prompt: 'Who\'s avatar you want?',
+                type: 'string'
+              }
+            ]
+          
         });  
     }
 
-    run(message, args) {
-    var member = message.mentions.members.first();
+    run(message, { keyAvatar }) {
+    var member = keyAvatar
     let embed = new Discord.RichEmbed()
-  .setImage(message.member.avatarURL)
+  .setImage(keyAvatar.avatarURL)
   .setColor('#275BF0')
     message.channel.send(embed)
 }
