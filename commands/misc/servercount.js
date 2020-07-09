@@ -1,5 +1,5 @@
 const { Command } = require('discord.js-commando');
-const { RichEmbed } = require('discord.js');
+const RichEmbed = require('discord.js');
 
 module.exports = class ServerCountCommand extends Command {
     constructor(client) {
@@ -12,8 +12,8 @@ module.exports = class ServerCountCommand extends Command {
     }
 
     run(msg, args) {
-        const scount = this.client.guilds.cache.size
-        const embed = new RichEmbed()
+        const scount = this.client.guilds.cache.size;
+        const embed = new RichEmbed.MessageEmbed()
             .setDescription(`I am in ${scount} servers!`)
             .setAuthor(msg.author.username, msg.author.displayAvatarURL)
             .setColor(0x00AE86)

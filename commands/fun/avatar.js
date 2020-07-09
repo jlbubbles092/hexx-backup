@@ -24,7 +24,7 @@ module.exports = class AvatarCommand extends Command {
 
     run(message, { keyAvatar }) {
     var member = keyAvatar
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
   .setImage(keyAvatar.avatarURL)
   .setColor('#275BF0')
     message.channel.send(embed)

@@ -12,7 +12,7 @@ module.exports = class InviteCommand extends Command {
     }
 
     run(msg, args) {
-        const embed = new RichEmbed()
+        const embed = new RichEmbed.MessageEmbed()
             .setDescription(`My support server is https://discord.gg/3fmpAXQ ,\nWhenever you need help, join that server and use Hexx Modmail or the support channel.`)
             .setAuthor(msg.author.username, msg.author.displayAvatarURL)
             .setColor(0x00AE86)
