@@ -1,1 +1,0 @@
-web: node server.js --unhandled-rejections=strict
