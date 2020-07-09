@@ -4,7 +4,7 @@ const path = require('path');
 const client = new CommandoClient({
   commandPrefix: 'h!',
   unknownCommandResponse: false,
-  owner: ['678941697488584734', '613364629464285316', '684519096788058145', '719252298811047936'],
+  owner: ['678941697488584734', '613364629464285316', '684519096788058145', '719252298811047936', '720353244307783863'],
   disableEveryone: true
 });
 
