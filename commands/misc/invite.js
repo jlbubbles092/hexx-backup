@@ -7,7 +7,7 @@ module.exports = class InviteCommand extends Command {
             name: 'invite',
             group: 'misc',
             memberName: 'invite',
-            description: 'Sends invite link in embed form.',
+            description: 'Sends support server invite link in embed form.',
         });    
     }
 
