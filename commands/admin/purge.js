@@ -20,6 +20,7 @@ module.exports = class KickCommand extends Command {
 	}
 
 	run(message, { purgeNumber }) {
-    
+    message.delete(purgeNumber)
+    message.channel.send(`Successfully deleted ${purgeNumber} messages.`)
   }
 };
