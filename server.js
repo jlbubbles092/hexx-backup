@@ -1,7 +1,6 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
 const Discord = require('discord.js');
-const client2 = new Discord.Client();
 
 const client = new CommandoClient({
   commandPrefix: 'h!',
@@ -28,7 +27,7 @@ client.on('ready', () => {
 
 const db = require("quick.db") //using quick.db package
 
-client2.on("guildMemberAdd", (member) => { //usage of welcome event
+client.on("guildMemberAdd", (member) => { //usage of welcome event
   let chx = db.get(`welchannel_${member.guild.id}`); //defining var
   
   if(chx === null) { //check if var have value or not

@@ -12,7 +12,7 @@ module.exports = class InviteCommand extends Command {
     }
 
     run(msg, args) {
-    msg.channel.send(`My support server is https://discord.gg/3fmpAXQ ,\nWhenever you need help, join that server and use Hexx Modmail or the support channel.`)
+    msg.channel.send(`My support server is https://discord.gg/YHTRn2N ,\nWhenever you need help, join that server and use Hexx Modmail or the support channel.`)
             
     }
 };
