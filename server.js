@@ -1,6 +1,6 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
-const discord = require('discord.js');
+const Discord = require('discord.js');
 
 const client = new CommandoClient({
   commandPrefix: 'h!',
@@ -34,7 +34,7 @@ client.on("guildMemberAdd", (member) => { //usage of welcome event
     return;
   }
 
-  let wembed = new discord.MessageEmbed() //define embed
+  let wembed = new Discord.MessageEmbed() //define embed
   .setAuthor(member.user.username, member.user.avatarURL())
   .setColor("#ff2050")
   .setThumbnail(member.user.avatarURL())
