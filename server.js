@@ -1,5 +1,6 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
+const discord = require('discord.js');
 
 const client = new CommandoClient({
   commandPrefix: 'h!',
@@ -23,5 +24,25 @@ client.on('ready', () => {
     console.log(`Logged in to ${client.user.tag}!`);
     client.user.setActivity(`https://discord.gg/3fmpAXQ`);
 });
+
+const db = require("quick.db") //using quick.db package
+
+client.on("guildMemberAdd", (member) => { //usage of welcome event
+  let chx = db.get(`welchannel_${member.guild.id}`); //defining var
+  
+  if(chx === null) { //check if var have value or not
+    return;
+  }
+
+  let wembed = new discord.MessageEmbed() //define embed
+  .setAuthor(member.user.username, member.user.avatarURL())
+  .setColor("#ff2050")
+  .setThumbnail(member.user.avatarURL())
+  .setDescription(`We are very happy to have you in our server`);
+  
+  client.channels.cache.get(chx).send(wembed) //get channel and send embed
+})
+
+
 
 client.login(process.env.TOKEN);
