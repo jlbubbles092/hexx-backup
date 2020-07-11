@@ -38,7 +38,7 @@ client.on("guildMemberAdd", (member) => { //usage of welcome event
   .setAuthor(member.user.username, member.user.avatarURL())
   .setColor("#ff2050")
   .setThumbnail(member.user.avatarURL())
-  .setDescription(`We are very happy to have you in our server`);
+  .setDescription(`We are very happy to have you in our server!`);
   
   client.channels.cache.get(chx).send(wembed) //get channel and send embed
 })
