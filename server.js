@@ -43,6 +43,22 @@ client.on("guildMemberAdd", (member) => { //usage of welcome event
   client.channels.cache.get(chx).send(wembed) //get channel and send embed
 })
 
+client.on("guildMemberRemove", (member) => {
+  let chx = db.get(`leavechannel_${member.guild.id}`);
+  
+  if(chx === null) {
+    return;
+  }
+  
+  let lembed = new Discord.MessageEmbed()
+  .setAuthor(member.user.username, member.user.avatarURL())
+  .setColor("#ff2050")
+  .setThumbnail(member.user.avatarURL())
+  .setDescription(`${member} just left, how sad.`);
+  
+  client.channels.cache.get(chx).send(lembed)
+})
+
 
 
 client.login(process.env.TOKEN);
