@@ -22,7 +22,7 @@ client.registry
 
 client.on('ready', () => {
     console.log(`Logged in to ${client.user.tag}!`);
-    client.user.setActivity(`https://discord.gg/3fmpAXQ`);
+    client.user.setActivity(`https://disc.gg/hexxOfficial`);
 });
 
 const db = require("quick.db") //using quick.db package
