@@ -36,7 +36,7 @@ client.on("guildMemberAdd", (member) => { //usage of welcome event
 
   let wembed = new Discord.MessageEmbed() //define embed
   .setAuthor(member.user.username, member.user.avatarURL())
-  .setColor("#ff2050")
+  .setColor("#00FF00")
   .setThumbnail(member.user.avatarURL())
   .setDescription(`We are very happy to have you in our server!`);
   
