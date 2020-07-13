@@ -7,6 +7,8 @@ module.exports = class BanCommand extends Command {
 			group: 'admin',
 			memberName: 'ban',
 			description: 'Bans a member/bot. Note: Bot role needs to be higher than the member/bot.',
+      clientPermissions: ['KICK_MEMBERS'],
+      userPermissions: ['KICK_MEMBERS'],
 		});
 	}
 
