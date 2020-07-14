@@ -7,8 +7,8 @@ module.exports = class KickCommand extends Command {
 			group: 'admin',
 			memberName: 'kick',
 			description: 'Kicks a member/bot. Note: Bot role needs to be higher than the member/bot.',
-      clientPermissions: ['BAN_MEMBERS'],
-      userPermissions: ['BAN_MEMBERS'],
+      clientPermissions: ['KICK_MEMBERS'],
+      userPermissions: ['KICK_MEMBERS'],
 		});
 	}
 
