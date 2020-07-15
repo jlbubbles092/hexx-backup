@@ -1,11 +1,12 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
 const Discord = require('discord.js');
+const token = process.env.TOKEN;
 
 const client = new CommandoClient({
   commandPrefix: 'h!',
   unknownCommandResponse: false,
-  owner: ['678941697488584734', '613364629464285316', '684519096788058145', '719252298811047936', '720353244307783863'],
+  owner: ['678941697488584734', '613364629464285316', '684519096788058145', '719252298811047936', '720353244307783863', '732412044057247885'],
   disableEveryone: true
 });
 
@@ -61,4 +62,4 @@ client.on("guildMemberRemove", (member) => {
 
 
 
-client.login(process.env.TOKEN);
+client.login(token);
