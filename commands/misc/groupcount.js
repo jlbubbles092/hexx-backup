@@ -20,7 +20,7 @@ module.exports = class GroupCountCommand extends Command {
 
     run(message, args, { groupid }) {
           var request = require('request')
-          var url = "https://groups.roblox.com/v1/groups/" + groupid
+          var url = "https://groups.roblox.com/v1/groups/" + groupid;
     
           request({
             method: 'GET',
@@ -31,7 +31,7 @@ return
 }
       
       var json = JSON.parse(text);
-      var gcount = json.items[0].
+      var gcount = json.items[0].groupid.memberCount
 message.channel.send(`${gcount} is how many members are in your group!`)
       })
     }
