@@ -30,8 +30,8 @@ if(err) {
 return
 }
       
-      var json = JSON.parse(text);
-      var gcount = json.items[0].groupid.memberCount
+      var json = JSON.decode(text);
+      var gcount = json.items[0].memberCount
 message.channel.send(`${gcount} is how many members are in your group!`)
       })
     }
