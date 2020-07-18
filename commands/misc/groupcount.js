@@ -31,7 +31,7 @@ return
 }
       
       var json = JSON.parse(text);
-      var gcount = json.items[0].statistics.memberCount
+      var gcount = json.items[0].
 message.channel.send(`${gcount} is how many members are in your group!`)
       })
     }
